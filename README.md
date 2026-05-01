@@ -152,7 +152,6 @@ Traced spans: `invoke_agent`, `chat <model>`, `execute_tool`, `handoff` — each
 │   ├── orchestration/workflow.py # HandoffBuilder wiring
 │   ├── observability/setup.py    # OTel + structured logging
 │   └── ui/app.py                 # Streamlit chat UI
-├── tests/                        # 26 unit tests + E2E tests
 ├── docker-compose.yml            # Docker deployment
 ├── Dockerfile
 ├── requirements.txt
@@ -172,14 +171,6 @@ Traced spans: `invoke_agent`, `chat <model>`, `execute_tool`, `handoff` — each
 
 ---
 
-## Running Tests
-
-```bash
-python -m pytest tests/ -q    # 26 passed
-```
-
----
-
 ## Docker
 
 ```bash
@@ -191,19 +182,6 @@ docker exec <ollama-container> ollama pull llama3.2
 Services: App (8501), Ollama (11434), Aspire Dashboard (18888).
 
 Set `exporter: "otlp"` in `settings.yaml` when using Docker Compose.
-
----
-
-## Documentation
-
-| File | Description |
-|------|-------------|
-| [project-overview.html](project-overview.html) | Comprehensive project overview with visuals |
-| [installation.html](installation.html) | Platform-specific setup (Win/Mac/Linux) |
-| [help.html](help.html) | User guide with sample questions |
-| [architecture.html](architecture.html) | Architecture deep-dive |
-| [setup.html](setup.html) | Production readiness guide |
-| [test.html](test.html) | Test results + compliance matrix |
 
 ---
 
